@@ -1,6 +1,6 @@
 //
-//  Optional Outlets.h
-//  Optional Outlets
+//  OptionalOutlets.h
+//  OptionalOutlets
 //
 //  Created by Francesco Perrotti-Garcia on 3/6/16.
 //  Copyright © 2016 Francesco Perrotti-Garcia. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import <AppKit/AppKit.h>
 
-@class Optional Outlets;
+@class OptionalOutlets;
 
-static Optional Outlets *sharedPlugin;
+static OptionalOutlets *sharedPlugin;
 
-@interface Optional Outlets : NSObject
+@interface OptionalOutlets : NSObject
 
 + (instancetype)sharedPlugin;
 - (id)initWithBundle:(NSBundle *)plugin;

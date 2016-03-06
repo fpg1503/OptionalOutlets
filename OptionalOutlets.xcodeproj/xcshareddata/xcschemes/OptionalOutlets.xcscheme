@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "890A4B3E171F031300AFE577"
-               BuildableName = "Optional Outlets.xcplugin"
-               BlueprintName = "Optional Outlets"
-               ReferencedContainer = "container:Optional Outlets.xcodeproj">
+               BuildableName = "OptionalOutlets.xcplugin"
+               BlueprintName = "OptionalOutlets"
+               ReferencedContainer = "container:OptionalOutlets.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8966AFCA173EB7BF004150C0"
-               BuildableName = "Optional OutletsTests.xctest"
-               BlueprintName = "Optional OutletsTests"
-               ReferencedContainer = "container:Optional Outlets.xcodeproj">
+               BuildableName = "OptionalOutletsTests.xctest"
+               BlueprintName = "OptionalOutletsTests"
+               ReferencedContainer = "container:OptionalOutlets.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "890A4B3E171F031300AFE577"
-            BuildableName = "Optional Outlets.xcplugin"
-            BlueprintName = "Optional Outlets"
-            ReferencedContainer = "container:Optional Outlets.xcodeproj">
+            BuildableName = "OptionalOutlets.xcplugin"
+            BlueprintName = "OptionalOutlets"
+            ReferencedContainer = "container:OptionalOutlets.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>

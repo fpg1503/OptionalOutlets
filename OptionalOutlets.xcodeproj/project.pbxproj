@@ -1,0 +1,290 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A3B7665C1C8C8462001FBC5A /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B7665B1C8C8462001FBC5A /* AppKit.framework */; };
+		A3B7665E1C8C8462001FBC5A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B7665D1C8C8462001FBC5A /* Foundation.framework */; };
+		A3B766621C8C8462001FBC5A /* OptionalOutlets.xcscheme in Resources */ = {isa = PBXBuildFile; fileRef = A3B766611C8C8462001FBC5A /* OptionalOutlets.xcscheme */; };
+		A3B766651C8C8462001FBC5A /* OptionalOutlets.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B766641C8C8462001FBC5A /* OptionalOutlets.m */; };
+		A3B766681C8C8462001FBC5A /* NSObject_Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B766671C8C8462001FBC5A /* NSObject_Extension.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A3B766581C8C8462001FBC5A /* OptionalOutlets.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OptionalOutlets.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3B7665B1C8C8462001FBC5A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		A3B7665D1C8C8462001FBC5A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		A3B766611C8C8462001FBC5A /* OptionalOutlets.xcscheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = OptionalOutlets.xcscheme; path = OptionalOutlets.xcodeproj/xcshareddata/xcschemes/OptionalOutlets.xcscheme; sourceTree = SOURCE_ROOT; };
+		A3B766631C8C8462001FBC5A /* OptionalOutlets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OptionalOutlets.h; sourceTree = "<group>"; };
+		A3B766641C8C8462001FBC5A /* OptionalOutlets.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OptionalOutlets.m; sourceTree = "<group>"; };
+		A3B766661C8C8462001FBC5A /* NSObject_Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSObject_Extension.h; sourceTree = "<group>"; };
+		A3B766671C8C8462001FBC5A /* NSObject_Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSObject_Extension.m; sourceTree = "<group>"; };
+		A3B766691C8C8462001FBC5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A3B766561C8C8462001FBC5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3B7665C1C8C8462001FBC5A /* AppKit.framework in Frameworks */,
+				A3B7665E1C8C8462001FBC5A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A3B7664F1C8C8462001FBC5A = {
+			isa = PBXGroup;
+			children = (
+				A3B7665F1C8C8462001FBC5A /* OptionalOutlets */,
+				A3B7665A1C8C8462001FBC5A /* Frameworks */,
+				A3B766591C8C8462001FBC5A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A3B766591C8C8462001FBC5A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A3B766581C8C8462001FBC5A /* OptionalOutlets.xcplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A3B7665A1C8C8462001FBC5A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A3B7665B1C8C8462001FBC5A /* AppKit.framework */,
+				A3B7665D1C8C8462001FBC5A /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A3B7665F1C8C8462001FBC5A /* OptionalOutlets */ = {
+			isa = PBXGroup;
+			children = (
+				A3B766631C8C8462001FBC5A /* OptionalOutlets.h */,
+				A3B766641C8C8462001FBC5A /* OptionalOutlets.m */,
+				A3B766661C8C8462001FBC5A /* NSObject_Extension.h */,
+				A3B766671C8C8462001FBC5A /* NSObject_Extension.m */,
+				A3B766691C8C8462001FBC5A /* Info.plist */,
+				A3B766601C8C8462001FBC5A /* Supporting Files */,
+			);
+			path = OptionalOutlets;
+			sourceTree = "<group>";
+		};
+		A3B766601C8C8462001FBC5A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A3B766611C8C8462001FBC5A /* OptionalOutlets.xcscheme */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A3B766571C8C8462001FBC5A /* OptionalOutlets */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A3B7666C1C8C8462001FBC5A /* Build configuration list for PBXNativeTarget "OptionalOutlets" */;
+			buildPhases = (
+				A3B766541C8C8462001FBC5A /* Sources */,
+				A3B766551C8C8462001FBC5A /* Resources */,
+				A3B766561C8C8462001FBC5A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OptionalOutlets;
+			productName = OptionalOutlets;
+			productReference = A3B766581C8C8462001FBC5A /* OptionalOutlets.xcplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A3B766501C8C8462001FBC5A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Francesco Perrotti-Garcia";
+				TargetAttributes = {
+					A3B766571C8C8462001FBC5A = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = A3B766531C8C8462001FBC5A /* Build configuration list for PBXProject "OptionalOutlets" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A3B7664F1C8C8462001FBC5A;
+			productRefGroup = A3B766591C8C8462001FBC5A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A3B766571C8C8462001FBC5A /* OptionalOutlets */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A3B766551C8C8462001FBC5A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3B766621C8C8462001FBC5A /* OptionalOutlets.xcscheme in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A3B766541C8C8462001FBC5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3B766651C8C8462001FBC5A /* OptionalOutlets.m in Sources */,
+				A3B766681C8C8462001FBC5A /* NSObject_Extension.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A3B7666A1C8C8462001FBC5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+			};
+			name = Debug;
+		};
+		A3B7666B1C8C8462001FBC5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+			};
+			name = Release;
+		};
+		A3B7666D1C8C8462001FBC5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				INFOPLIST_FILE = OptionalOutlets/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.perrotti-garcia.OptionalOutlets";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Debug;
+		};
+		A3B7666E1C8C8462001FBC5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				INFOPLIST_FILE = OptionalOutlets/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.perrotti-garcia.OptionalOutlets";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A3B766531C8C8462001FBC5A /* Build configuration list for PBXProject "OptionalOutlets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3B7666A1C8C8462001FBC5A /* Debug */,
+				A3B7666B1C8C8462001FBC5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A3B7666C1C8C8462001FBC5A /* Build configuration list for PBXNativeTarget "OptionalOutlets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3B7666D1C8C8462001FBC5A /* Debug */,
+				A3B7666E1C8C8462001FBC5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A3B766501C8C8462001FBC5A /* Project object */;
+}

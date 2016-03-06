@@ -1,6 +1,6 @@
 //
 //  NSObject_Extension.h
-//  Optional Outlets
+//  OptionalOutlets
 //
 //  Created by Francesco Perrotti-Garcia on 3/6/16.
 //  Copyright © 2016 Francesco Perrotti-Garcia. All rights reserved.

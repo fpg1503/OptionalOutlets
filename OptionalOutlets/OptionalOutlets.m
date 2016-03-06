@@ -1,19 +1,19 @@
 //
-//  Optional Outlets.m
-//  Optional Outlets
+//  OptionalOutlets.m
+//  OptionalOutlets
 //
 //  Created by Francesco Perrotti-Garcia on 3/6/16.
 //  Copyright © 2016 Francesco Perrotti-Garcia. All rights reserved.
 //
 
-#import "Optional Outlets.h"
+#import "OptionalOutlets.h"
 
-@interface Optional Outlets()
+@interface OptionalOutlets()
 
 @property (nonatomic, strong, readwrite) NSBundle *bundle;
 @end
 
-@implementation Optional Outlets
+@implementation OptionalOutlets
 
 + (instancetype)sharedPlugin
 {
