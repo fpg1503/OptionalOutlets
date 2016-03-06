@@ -6,7 +6,7 @@ This Xcode plugin makes `@IBOutlet`s Optional in Xcode.
 <img src="OptionalOutlets.gif" alt="OptionalOutlets demo" />
 </p>
 
-| OptionalOutlets |
+| | OptionalOutlets
 ----------------------|----------------------------------
 :white_check_mark: | No method swizzling needed
 :rocket: | Saves you **hours** of boredom by not having to manually fixing the outlets
