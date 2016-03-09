@@ -15,7 +15,7 @@
 }
 
 - (nonnull NSString *)addPrivateKeyword {
-    return [self replaceMatchesWithRegex:@"(^\\s*@IBOutlet)\\sweak\\s([\\w:\\s]*)" replaceTemplate:@"$1 private weak $2"];
+    return [self replaceMatchesWithRegex:@"(^\\s*@IBOutlet)\\s*((?:weak\\s*)?\\s*var\\s*\\w*:[\\w\\s]*)" replaceTemplate:@"$1 private $2"];
 }
 
 #pragma mark Internal
