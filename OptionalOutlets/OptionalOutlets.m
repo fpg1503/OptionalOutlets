@@ -7,6 +7,7 @@
 //
 
 #import "OptionalOutlets.h"
+#import "NSString+OptionalOutlets_Additions.h"
 
 @interface OptionalOutlets()
 
@@ -21,6 +22,9 @@
 
 @implementation OptionalOutlets
 
+static NSString * const PrivateFeatureKey = @"com.perrotti-garcia.OptionalOutlets.kPrivateFeatureEnabled";
+static NSString * const OptionalFeatureKey = @"com.perrotti-garcia.OptionalOutlets.kOptionalFeatureEnabled";
+
 + (instancetype)sharedPlugin
 {
     return sharedPlugin;
@@ -31,15 +35,65 @@
     if (self) {
         // reference to plugin's bundle, for resource access
         self.bundle = plugin;
+        [self setDefaultValue:@(YES) forFeatureKey:OptionalFeatureKey];
+        [self setDefaultValue:@(YES) forFeatureKey:PrivateFeatureKey];
         [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(didApplicationFinishLaunchingNotification:)
+                                                 selector:@selector(applicationDidFinishLaunching:)
                                                      name:NSApplicationDidFinishLaunchingNotification
+                                                   object:nil];
+
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(menuDidChange:)
+                                                     name:NSMenuDidChangeItemNotification
                                                    object:nil];
     }
     return self;
 }
 
-- (void)didApplicationFinishLaunchingNotification:(NSNotification*)notification {
+- (void)menuDidChange:(NSNotification *)notification {
+    NSMenuItem *menuItem = [[NSApp mainMenu] itemWithTitle:@"Editor"];
+    NSString *optionalMenuTitle = @"Turn '!' into '?' in @IBOutlets";
+    if (menuItem && [menuItem.submenu itemWithTitle:optionalMenuTitle] == nil) {
+        [menuItem.submenu addItem:[NSMenuItem separatorItem]];
+        NSMenuItem *enableOptionalOutlet = [[NSMenuItem alloc] initWithTitle:optionalMenuTitle action:@selector(toggleOptionalFeature:) keyEquivalent:@""];
+        enableOptionalOutlet.target = self;
+        if ([[NSUserDefaults standardUserDefaults] boolForKey:OptionalFeatureKey]) {
+            enableOptionalOutlet.state = NSOnState;
+        }
+        [menuItem.submenu addItem:enableOptionalOutlet];
+
+        NSMenuItem *enablePrivateMenu = [[NSMenuItem alloc] initWithTitle:@"Add `private` keyword to @IBOutlets" action:@selector(togglePrivateFeature:) keyEquivalent:@""];
+        enablePrivateMenu.target = self;
+        if ([[NSUserDefaults standardUserDefaults] boolForKey:PrivateFeatureKey]) {
+            enablePrivateMenu.state = NSOnState;
+        }
+        [menuItem.submenu addItem:enablePrivateMenu];
+    }
+}
+
+- (void)toggleOptionalFeature:(NSMenuItem *)menuItem {
+    BOOL shouldCheck = menuItem.state == NSOnState;
+    menuItem.state = shouldCheck ? NSOffState : NSOnState;
+    [[NSUserDefaults standardUserDefaults] setBool:!shouldCheck forKey:OptionalFeatureKey];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+- (void)togglePrivateFeature:(NSMenuItem *)menuItem {
+    BOOL shouldCheck = menuItem.state == NSOnState;
+    menuItem.state = shouldCheck ? NSOffState : NSOnState;
+    [[NSUserDefaults standardUserDefaults] setBool:!shouldCheck forKey:PrivateFeatureKey];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+- (void)setDefaultValue:(id)value forFeatureKey:(NSString *)featureKey {
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    if ([userDefaults valueForKey:featureKey] == nil) {
+        [userDefaults setValue:value forKey:featureKey];
+        [userDefaults synchronize];
+    }
+}
+
+- (void)applicationDidFinishLaunching:(NSNotification *)notification {
     //removeObserver
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NSApplicationDidFinishLaunchingNotification object:nil];
     
@@ -90,18 +144,14 @@
 }
 
 - (nonnull NSString *)fixedStringForString:(nonnull NSString *)string {
-    
-    NSString *regexPattern = @"^(\\s*@IBOutlet[\\w:\\s]*)!";
-    NSString *replaceTemplate = @"$1?";
-    
-    NSMutableString *fixedString = [string mutableCopy];
-    NSRange fullRange = (NSRange){0, fixedString.length};
-    
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:regexPattern options:0 error:nil];
-    
-    NSUInteger replaces = [regex replaceMatchesInString:fixedString options:0 range:fullRange withTemplate:replaceTemplate];
-    
-    return replaces == 1 ? fixedString : string;
+
+    BOOL enabledOptionalFeature = [[NSUserDefaults standardUserDefaults] boolForKey:OptionalFeatureKey];
+    BOOL enabledPrivateFeature = [[NSUserDefaults standardUserDefaults] boolForKey:PrivateFeatureKey];
+
+    NSString *optionalOutletString = enabledOptionalFeature ? [string replaceImplicitlyUnwrappedForOptional] : string;
+    NSString *privateOutletString = enabledPrivateFeature ? [optionalOutletString addPrivateKeyword] : optionalOutletString;
+
+    return privateOutletString;
 }
 
 - (void)dealloc {
