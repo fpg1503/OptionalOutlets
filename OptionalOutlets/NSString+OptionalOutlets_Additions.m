@@ -11,7 +11,7 @@
 @implementation NSString (OptionalOutlets_Additions)
 
 - (nonnull NSString *)replaceImplicitlyUnwrappedForOptional {
-    return [self replaceMatchesWithRegex:@"^(\\s*@IBOutlet[\\w:\\s]*)!" replaceTemplate:@"$1?"];
+    return [self replaceMatchesWithRegex:@"^(\\s*@IBOutlet[\\w:\\s\\[\\]]*)!" replaceTemplate:@"$1?"];
 }
 
 - (nonnull NSString *)addPrivateKeyword {
