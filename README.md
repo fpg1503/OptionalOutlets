@@ -1,6 +1,6 @@
 # OptionalOutlets
 
-This Xcode plugin makes `@IBOutlet`s Optional in Xcode.
+This Xcode plugin makes `@IBOutlet`s `Optional` and `private` in Xcode.
 
 <p align="center">
 <img src="OptionalOutlets.gif" alt="OptionalOutlets demo" />
@@ -8,10 +8,10 @@ This Xcode plugin makes `@IBOutlet`s Optional in Xcode.
 
 | | OptionalOutlets
 ----------------------|----------------------------------
-:white_check_mark: | No method swizzling needed
-:rocket: | Saves you **hours** of boredom by not having to manually fixing the outlets
+:white_check_mark: | Supports `weak` and `strong` Outlets and Collections 
 :sparkles: | Super easy installation
 :muscle: | `ImplicitlyUnwrappedOptional`s are ugly, say goodbye to them!
+:see_no_evil: | Outlets should be private, now they are!
 
 # Installation
 
@@ -38,13 +38,14 @@ You should restart Xcode after that.
 
 # What does this do?
 
-The primary goal of this plugin is to make `@IBOutlet`s Optional. By default, Xcode uses `ImplicitlyUnwrappedOptional`s, but that's dangerous and even though you can safely unwrap them most people don't. This plugin automatically makes your outlets Optional, simple as that!
+The primary goal of this plugin is to make `@IBOutlet`s `Optional`. By default, Xcode uses `ImplicitlyUnwrappedOptional`s, but that's dangerous and even though you can safely unwrap them most people don't. The secondary goal is to make your `@IBOutlet`s `private`. Using outlets outside a class is a code smell and seldom is needed. This plugin automatically makes your outlets `Optional` and `private`, simple as that! Don't worry, they are independent rules and you can disable them at any time.
 
-**Let's get rid of force unwrapping!**
+:rocket: **Let's Make Xcode Great Again™**
 
 # Special Thanks
 
 - [@marcelofabri_](https://twitter.com/marcelofabri_) for his CocoaHeads talk about [IBOutlint](https://github.com/marcelofabri/IBOutlint) which gave me the motivation to write this and from which I've shamelessly copied most of the code.
+- [@chrisfsampaio](https://twitter.com/chrisfsampaio) for adding support to making outlets `private`, adding an example project, adding feature toggles, reporting bugs and a bunch of other stuff I probably forgot to mention.
 - [@orta](https://twitter.com/orta) for blogging about [his experience on building a Xcode plugin](http://artsy.github.io/blog/2014/06/17/building-the-xcode-plugin-snapshots/).
 - [@kattrali](https://twitter.com/kattrali) for providing a [template for Xcode plugins](https://github.com/kattrali/Xcode-Plugin-Template).
 - [@gsampaio](https://twitter.com/gsampaio) for telling me to throw the Swift version of this plugin away, copy Fabri's and save ~8Mb for all the users.
